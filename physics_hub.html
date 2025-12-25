@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Physics Hub</title>
+<style>
+body { font-family: Arial; background:#f2f2f2; margin:0; padding:0;}
+header { background:#1e90ff; color:white; text-align:center; padding:20px;}
+section { background:white; margin:20px; padding:20px; border-radius:10px; box-shadow:0 0 5px rgba(0,0,0,0.2);}
+h2 { color:#1e90ff; }
+ul { list-style-type: none; padding-left:0;}
+li { margin:5px 0;}
+a { text-decoration:none; color:#ff4500;}
+footer { text-align:center; padding:20px; background:#1e90ff; color:white;}
+</style>
+</head>
+<body>
+<header>
+<h1>Physics Hub</h1>
+<p>Global Physics Resources - Free & Legal</p>
+</header>
+
+<div id="hub"></div>
+
+<footer>
+Physics Hub © 2025 - Legal & Free Resources
+</footer>
+
+<script>
+// JSON Data for PDFs
+const physicsData = [
+    { section:"Mechanics", pdfs:[
+        {title:"Mechanics PDF 1", url:"https://www.example.com/mechanics1.pdf"},
+        {title:"Mechanics PDF 2", url:"https://www.example.com/mechanics2.pdf"}
+    ]},
+    { section:"Thermodynamics", pdfs:[
+        {title:"Thermodynamics PDF 1", url:"https://www.example.com/thermo1.pdf"},
+        {title:"Thermodynamics PDF 2", url:"https://www.example.com/thermo2.pdf"}
+    ]},
+    { section:"Optics", pdfs:[
+        {title:"Optics PDF 1", url:"https://www.example.com/optics1.pdf"},
+        {title:"Optics PDF 2", url:"https://www.example.com/optics2.pdf"}
+    ]},
+    { section:"Electromagnetism", pdfs:[
+        {title:"Electromagnetism PDF 1", url:"https://www.example.com/em1.pdf"},
+        {title:"Electromagnetism PDF 2", url:"https://www.example.com/em2.pdf"}
+    ]}
+];
+
+// Render Sections
+const hubDiv = document.getElementById("hub");
+physicsData.forEach(sec=>{
+    const sectionEl = document.createElement("section");
+    const h2 = document.createElement("h2");
+    h2.textContent = sec.section;
+    sectionEl.appendChild(h2);
+
+    const ul = document.createElement("ul");
+    sec.pdfs.forEach(pdf=>{
+        const li = document.createElement("li");
+        const a = document.createElement("a");
+        a.href = pdf.url;
+        a.target="_blank";
+        a.textContent = pdf.title;
+        li.appendChild(a);
+        ul.appendChild(li);
+    });
+    sectionEl.appendChild(ul);
+    hubDiv.appendChild(sectionEl);
+});
+</script>
+</body>
+</html>
