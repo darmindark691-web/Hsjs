@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Physics Engine</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .paper {
+      margin-bottom: 20px;
+    }
+    iframe {
+      width: 100%;
+      height: 600px;
+      border: 1px solid #ccc;
+    }
+    .source {
+      font-size: 12px;
+      color: gray;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+
+<h2>📘 Physics Research PDFs</h2>
+<div id="papers">Loading...</div>
+
+<script>
+fetch("https://broken-recipe-0274.darmindark691.workers.dev?page=1")
+  .then(r => r.json())
+  .then(data => {
+    const box = document.getElementById("papers");
+    box.innerHTML = "";
+
+    data.results.forEach((p, i) => {
+      const div = document.createElement("div");
+      div.className = "paper";
+
+      div.innerHTML = `
+        <h3>${p.title}</h3>
+
+        <!-- PDF opens INSIDE engine -->
+        <iframe src="${p.pdf}"></iframe>
+
+        <div class="source">Source: arXiv</div>
+        <hr>
+      `;
+
+      box.appendChild(div);
+    });
+  })
+  .catch(() => {
+    document.getElementById("papers").innerHTML = "Error loading PDFs";
+  });
+</script>
+
+</body>
+</html>
