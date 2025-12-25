@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ArXiv Physics PDFs</title>
+<style>
+  body { font-family: Arial, sans-serif; padding: 20px; }
+  input, button { padding: 8px; margin: 5px 0; }
+  .paper { margin-bottom: 15px; border-bottom: 1px solid #ccc; padding-bottom: 10px; }
+</style>
+</head>
+<body>
+
+<h1>ArXiv Physics PDF Search</h1>
+
+<input type="text" id="query" placeholder="Search physics papers...">
+<button onclick="searchArxiv()">Search</button>
+
+<div id="results"></div>
+
+<script>
+async function searchArxiv() {
+    const query = document.getElementById('query').value;
+    const resultsDiv = document.getElementById('results');
+    resultsDiv.innerHTML = "Loading...";
+    
+    // arXiv API URL (Physics category)
+    const url = `https://export.arxiv.org/api/query?search_query=cat:physics+AND+all:${encodeURIComponent(query)}&start=0&max_results=10`;
+    
+    try {
+        const response = await fetch(url);
+        const text = await response.text();
+        const parser = new DOMParser();
+        const xmlDoc = parser.parseFromString(text, "application/xml");
+        
+        const entries = xmlDoc.getElementsByTagName('entry');
+        if(entries.length === 0){
+            resultsDiv.innerHTML = "No results found.";
+            return;
+        }
+
+        let html = '';
+        for(let i=0; i<entries.length; i++){
+            const title = entries[i].getElementsByTagName('title')[0].textContent;
+            const pdfLink = Array.from(entries[i].getElementsByTagName('link'))
+                                 .find(l => l.getAttribute('title') === 'pdf')
+                                 .getAttribute('href');
+            html += `<div class="paper">
+                        <h3>${title}</h3>
+                        <a href="${pdfLink}" target="_blank">Download PDF</a>
+                     </div>`;
+        }
+        resultsDiv.innerHTML = html;
+
+    } catch (error) {
+        resultsDiv.innerHTML = "Error fetching data.";
+        console.error(error);
+    }
+}
+</script>
+
+</body>
+</html>
