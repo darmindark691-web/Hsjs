@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Physics Research Papers</title>
+
+<style>
+body{
+  font-family: Arial, sans-serif;
+  margin:0;
+  background:#f5f5f5;
+}
+header{
+  background:#0d47a1;
+  color:white;
+  padding:15px;
+  font-size:20px;
+}
+small{opacity:.8}
+.container{
+  padding:10px;
+}
+.paper{
+  background:white;
+  padding:12px;
+  margin-bottom:10px;
+  border-radius:5px;
+  box-shadow:0 1px 3px rgba(0,0,0,.1);
+}
+.paper h3{
+  margin:0 0 6px;
+  font-size:16px;
+}
+.meta{
+  font-size:13px;
+  color:#555;
+}
+a.pdf{
+  display:inline-block;
+  margin-top:8px;
+  color:#0d47a1;
+  text-decoration:none;
+  font-weight:bold;
+}
+.error{
+  color:red;
+  padding:10px;
+}
+.loader{
+  padding:10px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+📘 Physics Research Papers<br>
+<small>Open research data (arXiv Physics)</small>
+</header>
+
+<div class="container" id="content">
+  <div class="loader">Loading papers...</div>
+</div>
+
+<script>
+const API = "https://sajan.darmindark691.workers.dev";
+
+fetch(API)
+  .then(res => res.json())
+  .then(data => {
+    const box = document.getElementById("content");
+    box.innerHTML = "";
+
+    if(!data.results || data.results.length === 0){
+      box.innerHTML = "<div class='error'>No data found</div>";
+      return;
+    }
+
+    data.results.forEach(p => {
+      const div = document.createElement("div");
+      div.className = "paper";
+      div.innerHTML = `
+        <h3>${p.title}</h3>
+        <div class="meta">
+          Published: ${p.published || "N/A"}<br>
+          Source: ${p.source}
+        </div>
+        <a class="pdf" href="${p.pdf}" target="_blank">📄 View PDF</a>
+      `;
+      box.appendChild(div);
+    });
+  })
+  .catch(err=>{
+    document.getElementById("content").innerHTML =
+      "<div class='error'>Error loading data</div>";
+    console.error(err);
+  });
+</script>
+
+</body>
+</html>
