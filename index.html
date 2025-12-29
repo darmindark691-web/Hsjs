@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Open Books Engine (DOAB)</title>
+</head>
+<body>
+
+<h2>📚 Free Academic Books (DOAB)</h2>
+<div id="books"></div>
+
+<script>
+const query = "economics"; // topic change kar sakte ho
+
+fetch(`https://directory.doabooks.org/api/search?query=${query}&page=1`)
+  .then(res => res.json())
+  .then(data => {
+    const box = document.getElementById("books");
+
+    data.docs.slice(0,10).forEach(book => {
+      if (!book.fulltext || book.fulltext.length === 0) return;
+
+      const pdf = book.fulltext[0].url;
+
+      box.innerHTML += `
+        <div style="margin-bottom:20px">
+          <h3>${book.title}</h3>
+          <p><b>Publisher:</b> ${book.publisher}</p>
+          <a href="${pdf}" target="_blank">📄 Open PDF</a>
+        </div>
+      `;
+    });
+  })
+  .catch(err => {
+    document.getElementById("books").innerText = "Error loading books";
+  });
+</script>
+
+</body>
+</html>
