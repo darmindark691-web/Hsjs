@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>MIT OpenCourseWare – Computer Science</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    li { margin: 12px 0; }
+    a { text-decoration: none; color: #0b5ed7; }
+    small { color: #666; }
+  </style>
+</head>
+<body>
+
+<h2>📘 MIT OpenCourseWare – Computer Science</h2>
+<ul id="list">Loading…</ul>
+
+<script>
+const list = document.getElementById("list");
+
+fetch("https://ocw.mit.edu/courses/find-by-topic/")
+  .then(res => res.text())
+  .then(html => {
+    const doc = new DOMParser().parseFromString(html, "text/html");
+
+    // Computer Science section
+    const csSection = [...doc.querySelectorAll("h3")]
+      .find(h => h.textContent.includes("Computer Science"));
+
+    if (!csSection) {
+      list.innerHTML = "Computer Science section not found";
+      return;
+    }
+
+    const ul = csSection.nextElementSibling;
+    const links = ul.querySelectorAll("a");
+
+    list.innerHTML = "";
+
+    [...links].slice(0, 20).forEach(a => {
+      const li = document.createElement("li");
+      li.innerHTML = `
+        <a href="https://ocw.mit.edu${a.getAttribute("href")}" target="_blank">
+          ${a.textContent.trim()}
+        </a>
+        <br><small>Source: MIT OpenCourseWare</small>
+      `;
+      list.appendChild(li);
+    });
+  })
+  .catch(() => {
+    list.innerHTML = "Failed to load MIT courses";
+  });
+</script>
+
+</body>
+</html>
