@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MIT OpenCourseWare – Coding</title>
+</head>
+<body>
+
+<h2>💻 MIT OpenCourseWare – Computer Science</h2>
+<div id="results"></div>
+
+<script>
+async function loadMIT() {
+  const url =
+    "https://ocw.mit.edu/api/v0/courses/?department=electrical-engineering-and-computer-science";
+
+  const res = await fetch(url);
+  const data = await res.json();
+
+  const box = document.getElementById("results");
+
+  data.results.slice(0, 5).forEach(c => {
+    const div = document.createElement("div");
+    div.innerHTML = `
+      <h3>${c.title}</h3>
+      <p>Course: ${c.course_number}</p>
+      <a href="https://ocw.mit.edu${c.url}" target="_blank">
+        Open Course
+      </a>
+      <hr>
+    `;
+    box.appendChild(div);
+  });
+}
+
+loadMIT();
+</script>
+
+</body>
+</html>
