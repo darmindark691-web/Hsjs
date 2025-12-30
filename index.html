@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Free Research Books – Auto Feed</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      margin: 0;
+      padding: 15px;
+    }
+    h1 {
+      text-align: center;
+    }
+    .topic {
+      background: #fff;
+      margin: 12px auto;
+      padding: 15px;
+      max-width: 650px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .topic h3 {
+      margin: 0 0 10px;
+    }
+    .links a {
+      display: block;
+      margin: 6px 0;
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    footer {
+      text-align: center;
+      font-size: 12px;
+      color: #555;
+      margin-top: 25px;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>📚 Free Research Books</h1>
+
+<div id="feed"></div>
+
+<footer>
+  ⚠️ Books & PDFs are hosted on open-access platforms (ORL, arXiv, DOAB)
+</footer>
+
+<script>
+  const topics = [
+    "Physics",
+    "Computer Science",
+    "Artificial Intelligence",
+    "Economics",
+    "Mathematics",
+    "Engineering",
+    "Medical Science",
+    "Chemistry",
+    "Data Science",
+    "Political Science"
+  ];
+
+  const feed = document.getElementById("feed");
+
+  topics.forEach(topic => {
+    const div = document.createElement("div");
+    div.className = "topic";
+
+    div.innerHTML = `
+      <h3>${topic}</h3>
+      <div class="links">
+        <a href="https://openresearchlibrary.org/search?query=${encodeURIComponent(topic)}" target="_blank">
+          📘 Open Research Library
+        </a>
+        <a href="https://arxiv.org/search/?query=${encodeURIComponent(topic)}&searchtype=all" target="_blank">
+          📄 arXiv Papers
+        </a>
+        <a href="https://www.doabooks.org/en/search?query=${encodeURIComponent(topic)}" target="_blank">
+          📚 Open Access Books (DOAB)
+        </a>
+      </div>
+    `;
+
+    feed.appendChild(div);
+  });
+</script>
+
+</body>
+</html>
