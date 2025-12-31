@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Open Research Hub</title>
+  <style>
+    body { font-family: Arial; padding: 20px; background:#f4f4f4; }
+    .card { background:#fff; padding:10px; margin:10px 0; border-radius:5px; }
+  </style>
+</head>
+<body>
+
+<h1>📚 Open Research Hub</h1>
+<p id="status">Loading data…</p>
+
+<h2>arXiv</h2>
+<div id="arxiv"></div>
+
+<h2>DOAJ</h2>
+<div id="doaj"></div>
+
+<script>
+async function loadData() {
+  try {
+    // arXiv
+    const arxivRes = await fetch("./data/arxiv.xml");
+    const arxivText = await arxivRes.text();
+    const xml = new DOMParser().parseFromString(arxivText, "text/xml");
+    const entries = xml.querySelectorAll("entry");
+
+    let ax = "";
+    entries.forEach(e => {
+      const t = e.querySelector("title")?.textContent.trim();
+      const p = e.querySelector("link[title='pdf']")?.getAttribute("href");
+      ax += `<div class="card"><b>${t}</b><br><a href="${p}" target="_blank">PDF</a></div>`;
+    });
+    document.getElementById("arxiv").innerHTML = ax;
+
+    // DOAJ
+    const doajRes = await fetch("./data/doaj.json");
+    const doaj = await doajRes.json();
+
+    let dj = "";
+    doaj.results.forEach(r => {
+      const t = r.bibjson.title;
+      const l = r.bibjson.link?.find(x => x.type === "fulltext")?.url;
+      dj += `<div class="card"><b>${t}</b><br>${l ? `<a href="${l}" target="_blank">PDF</a>` : "No PDF"}</div>`;
+    });
+    document.getElementById("doaj").innerHTML = dj;
+
+    document.getElementById("status").innerText = "Data loaded successfully";
+  } catch (err) {
+    document.getElementById("status").innerText = "Error loading data";
+    console.error(err);
+  }
+}
+
+loadData();
+</script>
+
+</body>
+</html>
