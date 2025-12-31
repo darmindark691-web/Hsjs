@@ -1,0 +1,211 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/yC+QiejT6x4KOyA3yS4hVbIrCrw</id>
+  <title>arXiv Query: search_query=all:cs.AI&amp;id_list=&amp;start=0&amp;max_results=10</title>
+  <updated>2025-12-31T04:59:49Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:cs.AI&amp;start=0&amp;max_results=10&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
+  <opensearch:totalResults>156292</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/cs/9909009v1</id>
+    <title>The Rough Guide to Constraint Propagation</title>
+    <updated>1999-09-08T13:50:01Z</updated>
+    <link href="https://arxiv.org/abs/cs/9909009v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/cs/9909009v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We provide here a simple, yet very general framework that allows us to explain several constraint propagation algorithms in a systematic way. In particular, using the notions commutativity and semi-commutativity, we show how the well-known AC-3, PC-2, DAC and DPC algorithms are instances of a single generic algorithm. The work reported here extends and simplifies that of Apt, cs.AI/9811024.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.PL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>1999-09-08T13:50:01Z</published>
+    <arxiv:comment>23 pages. To appear in the Proc. 5th International Conference on Principles and Practice of Constraint Programming as an invited talk</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Krzysztof R. Apt</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/cs/0612057v1</id>
+    <title>Conscious Intelligent Systems - Part II - Mind, Thought, Language and Understanding</title>
+    <updated>2006-12-09T17:28:24Z</updated>
+    <link href="https://arxiv.org/abs/cs/0612057v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/cs/0612057v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  This is the second part of a paper on Conscious Intelligent Systems. We use the understanding gained in the first part (Conscious Intelligent Systems Part 1: IXI (arxiv id cs.AI/0612056)) to look at understanding. We see how the presence of mind affects understanding and intelligent systems; we see that the presence of mind necessitates language. The rise of language in turn has important effects on understanding. We discuss the humanoid question and how the question of self-consciousness (and by association mind/thought/language) would affect humanoids too.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2006-12-09T17:28:24Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>U. Gayathree</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/cs/0203003v1</id>
+    <title>Deductive Nonmonotonic Inference Operations: Antitonic Representations</title>
+    <updated>2002-03-01T11:20:59Z</updated>
+    <link href="https://arxiv.org/abs/cs/0203003v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/cs/0203003v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We provide a characterization of those nonmonotonic inference operations C for which C(X) may be described as the set of all logical consequences of X together with some set of additional assumptions S(X) that depends anti-monotonically on X (i.e., X is a subset of Y implies that S(Y) is a subset of S(X)). The operations represented are exactly characterized in terms of properties most of which have been studied in Freund-Lehmann(cs.AI/0202031). Similar characterizations of right-absorbing and cumulative operations are also provided. For cumulative operations, our results fit in closely with those of Freund. We then discuss extending finitary operations to infinitary operations in a canonical way and discuss co-compactness properties. Our results provide a satisfactory notion of pseudo-compactness, generalizing to deductive nonmonotonic operations the notion of compactness for monotonic operations. They also provide an alternative, more elegant and more general, proof of the existence of an infinitary deductive extension for any finitary deductive operation (Theorem 7.9 of Freund-Lehmann).</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2002-03-01T11:20:59Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <arxiv:journal_ref>Journal of Logic and Computation, 5(1) (1995) pp. 111-122</arxiv:journal_ref>
+    <author>
+      <name>Yuri Kaluzhny</name>
+    </author>
+    <author>
+      <name>Daniel Lehmann</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/cs/0702170v1</id>
+    <title>Generic Global Constraints based on MDDs</title>
+    <updated>2007-02-28T15:32:48Z</updated>
+    <link href="https://arxiv.org/abs/cs/0702170v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/cs/0702170v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  Constraint Programming (CP) has been successfully applied to both constraint satisfaction and constraint optimization problems. A wide variety of specialized global constraints provide critical assistance in achieving a good model that can take advantage of the structure of the problem in the search for a solution. However, a key outstanding issue is the representation of 'ad-hoc' constraints that do not have an inherent combinatorial nature, and hence are not modeled well using narrowly specialized global constraints. We attempt to address this issue by considering a hybrid of search and compilation. Specifically we suggest the use of Reduced Ordered Multi-Valued Decision Diagrams (ROMDDs) as the supporting data structure for a generic global constraint. We give an algorithm for maintaining generalized arc consistency (GAC) on this constraint that amortizes the cost of the GAC computation over a root-to-leaf path in the search tree without requiring asymptotically more space than used for the MDD. Furthermore we present an approach for incrementally maintaining the reduced property of the MDD during the search, and show how this can be used for providing domain entailment detection. Finally we discuss how to apply our approach to other similar data structures such as AOMDDs and Case DAGs. The technique used can be seen as an extension of the GAC algorithm for the regular language constraint on finite length input.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2007-02-28T15:32:48Z</published>
+    <arxiv:comment>Preliminary 15 pages version of the tech-report cs.AI/0611141</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Peter Tiedemann</name>
+    </author>
+    <author>
+      <name>Henrik Reif Andersen</name>
+    </author>
+    <author>
+      <name>Rasmus Pagh</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2401.03545v1</id>
+    <title>Is there really a Citation Age Bias in NLP?</title>
+    <updated>2024-01-07T17:12:08Z</updated>
+    <link href="https://arxiv.org/abs/2401.03545v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2401.03545v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Citations are a key ingredient of scientific research to relate a paper to others published in the community. Recently, it has been noted that there is a citation age bias in the Natural Language Processing (NLP) community, one of the currently fastest growing AI subfields, in that the mean age of the bibliography of NLP papers has become ever younger in the last few years, leading to `citation amnesia' in which older knowledge is increasingly forgotten. In this work, we put such claims into perspective by analyzing the bibliography of $\sim$300k papers across 15 different scientific fields submitted to the popular preprint server Arxiv in the time period from 2013 to 2022. We find that all AI subfields (in particular: cs.AI, cs.CL, cs.CV, cs.LG) have similar trends of citation amnesia, in which the age of the bibliography has roughly halved in the last 10 years (from above 12 in 2013 to below 7 in 2022), on average. Rather than diagnosing this as a citation age bias in the NLP community, we believe this pattern is an artefact of the dynamics of these research fields, in which new knowledge is produced in ever shorter time intervals.</summary>
+    <category term="cs.DL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-01-07T17:12:08Z</published>
+    <arxiv:primary_category term="cs.DL"/>
+    <author>
+      <name>Hoa Nguyen</name>
+    </author>
+    <author>
+      <name>Steffen Eger</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2412.12121v1</id>
+    <title>NLLG Quarterly arXiv Report 09/24: What are the most influential current AI Papers?</title>
+    <updated>2024-12-02T22:10:38Z</updated>
+    <link href="https://arxiv.org/abs/2412.12121v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2412.12121v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The NLLG (Natural Language Learning &amp; Generation) arXiv reports assist in navigating the rapidly evolving landscape of NLP and AI research across cs.CL, cs.CV, cs.AI, and cs.LG categories. This fourth installment captures a transformative period in AI history - from January 1, 2023, following ChatGPT's debut, through September 30, 2024. Our analysis reveals substantial new developments in the field - with 45% of the top 40 most-cited papers being new entries since our last report eight months ago and offers insights into emerging trends and major breakthroughs, such as novel multimodal architectures, including diffusion and state space models. Natural Language Processing (NLP; cs.CL) remains the dominant main category in the list of our top-40 papers but its dominance is on the decline in favor of Computer vision (cs.CV) and general machine learning (cs.LG). This report also presents novel findings on the integration of generative AI in academic writing, documenting its increasing adoption since 2022 while revealing an intriguing pattern: top-cited papers show notably fewer markers of AI-generated content compared to random samples. Furthermore, we track the evolution of AI-associated language, identifying declining trends in previously common indicators such as "delve".</summary>
+    <category term="cs.DL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-12-02T22:10:38Z</published>
+    <arxiv:primary_category term="cs.DL"/>
+    <author>
+      <name>Christoph Leiter</name>
+    </author>
+    <author>
+      <name>Jonas Belouadi</name>
+    </author>
+    <author>
+      <name>Yanran Chen</name>
+    </author>
+    <author>
+      <name>Ran Zhang</name>
+    </author>
+    <author>
+      <name>Daniil Larionov</name>
+    </author>
+    <author>
+      <name>Aida Kostikova</name>
+    </author>
+    <author>
+      <name>Steffen Eger</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1309.2351v1</id>
+    <title>Elementos de ingeniería de explotación de la información aplicados a la investigación tributaria fiscal</title>
+    <updated>2013-09-10T00:42:05Z</updated>
+    <link href="https://arxiv.org/abs/1309.2351v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1309.2351v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>By introducing elements of information mining to tax analysis, by means of data mining software and advanced computational concepts of artificial intelligence, the problem of tax evader's crime against public property has been addressed. Through an empirical approach from a hypothetical case of use, induction algorithms, neural networks and bayesian networks are applied to determine the feasibility of its heuristic application by the tax public administrator. Different strategies are explored to facilitate the work of local and regional federal tax inspectors, considering their limited computational capabilities, but equally effective for those social scientist committed to handcrafting tax research.
+  -----
+  Apresentando a introdução de elementos de exploração de informações para análise fiscal, por meio de software de mineração de dados e conceitos avançados computacionais de inteligência artificial, foi abordado o problema do crime de sonegador fiscal contra o patrimônio público. Através de uma abordagem empírica a partir de um caso hipotético de uso, os algoritmos de indução, redes neurais e redes bayesianas são aplicados para determinar a viabilidade de sua aplicação heurística pelo administrador público tributário. Diferentes estratégias são exploradas para facilitar o trabalho dos inspectores tributários federais locais e regionais, tendo em conta as suas capacidades computacionais limitados, mas igualmente eficaz para aqueles cientista social comprometido com a investigação fiscal.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2013-09-10T00:42:05Z</published>
+    <arxiv:comment>30 pages, 7 figures, written in Castilian, Artificial Intelligence (cs.AI), Computers and Society (cs.CY)</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Rodrigo Lopez-Pablos</name>
+      <arxiv:affiliation>Universidad Nacional de La Matanza y Universidad Tecnológica Nacional</arxiv:affiliation>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2308.02540v2</id>
+    <title>Top-down Automated Theorem Proving (Notes for Sir Timothy)</title>
+    <updated>2023-08-08T08:17:52Z</updated>
+    <link href="https://arxiv.org/abs/2308.02540v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2308.02540v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We describe a "top down" approach for automated theorem proving (ATP). Researchers might usefully investigate the forms of the theorems mathematicians use in practice, carefully examine how they differ and are proved in practice, and code all relevant domain concepts. These concepts encode a large portion of the knowledge in any domain. Furthermore, researchers should write programs that produce proofs of the kind that human mathematicians write (and publish); this means proofs that might sometimes have mistakes; and this means making inferences that are sometimes invalid.
+  This approach is meant to contrast with the historically dominant "bottom up" approach: coding fundamental types (typically sets), axioms and rules for (valid) inference, and building up from this foundation to the theorems of mathematical practice and to their outstanding questions. It is an important fact that the actual proofs that mathematicians publish in math journals do not look like the formalized proofs of Russell &amp; Whitehead's Principia Mathematica (or modern computer systems like Lean that automate some of this formalization). We believe some "lack of rigor" (in mathematical practice) is human-like, and can and should be leveraged for ATP.</summary>
+    <category term="cs.LO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-08-01T14:03:40Z</published>
+    <arxiv:comment>Cross list with cs.AI</arxiv:comment>
+    <arxiv:primary_category term="cs.LO"/>
+    <author>
+      <name>C. E. Larson</name>
+    </author>
+    <author>
+      <name>N. Van Cleemput</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/cs/0307048v2</id>
+    <title>Integrating cardinal direction relations and other orientation relations in Qualitative Spatial Reasoning</title>
+    <updated>2004-10-05T15:45:31Z</updated>
+    <link href="https://arxiv.org/abs/cs/0307048v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/cs/0307048v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We propose a calculus integrating two calculi well-known in Qualitative Spatial Reasoning (QSR): Frank's projection-based cardinal direction calculus, and a coarser version of Freksa's relative orientation calculus. An original constraint propagation procedure is presented, which implements the interaction between the two integrated calculi. The importance of taking into account the interaction is shown with a real example providing an inconsistent knowledge base, whose inconsistency (a) cannot be detected by reasoning separately about each of the two components of the knowledge, just because, taken separately, each is consistent, but (b) is detected by the proposed algorithm, thanks to the interaction knowledge propagated from each of the two compnents to the other.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2003-07-21T13:03:19Z</published>
+    <arxiv:comment>Includes new material, such as a section on the use of the work in the concrete domain of the ALC(D) spatio-temporalisation defined in http://arXiv.org/abs/cs.AI/0307040</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Amar Isli</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.22628v1</id>
+    <title>Sentra-Guard: A Multilingual Human-AI Framework for Real-Time Defense Against Adversarial LLM Jailbreaks</title>
+    <updated>2025-10-26T11:19:47Z</updated>
+    <link href="https://arxiv.org/abs/2510.22628v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2510.22628v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This paper presents a real-time modular defense system named Sentra-Guard. The system detects and mitigates jailbreak and prompt injection attacks targeting large language models (LLMs). The framework uses a hybrid architecture with FAISS-indexed SBERT embedding representations that capture the semantic meaning of prompts, combined with fine-tuned transformer classifiers, which are machine learning models specialized for distinguishing between benign and adversarial language inputs. It identifies adversarial prompts in both direct and obfuscated attack vectors. A core innovation is the classifier-retriever fusion module, which dynamically computes context-aware risk scores that estimate how likely a prompt is to be adversarial based on its content and context. The framework ensures multilingual resilience with a language-agnostic preprocessing layer. This component automatically translates non-English prompts into English for semantic evaluation, enabling consistent detection across over 100 languages. The system includes a HITL feedback loop, where decisions made by the automated system are reviewed by human experts for continual learning and rapid adaptation under adversarial pressure. Sentra-Guard maintains an evolving dual-labeled knowledge base of benign and malicious prompts, enhancing detection reliability and reducing false positives. Evaluation results show a 99.96% detection rate (AUC = 1.00, F1 = 1.00) and an attack success rate (ASR) of only 0.004%. This outperforms leading baselines such as LlamaGuard-2 (1.3%) and OpenAI Moderation (3.7%). Unlike black-box approaches, Sentra-Guard is transparent, fine-tunable, and compatible with diverse LLM backends. Its modular design supports scalable deployment in both commercial and open-source environments. The system establishes a new state-of-the-art in adversarial LLM defense.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-10-26T11:19:47Z</published>
+    <arxiv:comment>11 pages, 5 figures. Preprint version under review in the area of Artificial Intelligence (cs.AI)</arxiv:comment>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Md. Mehedi Hasan</name>
+    </author>
+    <author>
+      <name>Ziaur Rahman</name>
+    </author>
+    <author>
+      <name>Rafid Mostafiz</name>
+    </author>
+    <author>
+      <name>Md. Abir Hossain</name>
+    </author>
+  </entry>
+</feed>
