@@ -1,0 +1,43 @@
+name: Fetch Data
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 */12 * * *"
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Create data folder
+        run: mkdir -p data
+
+      # 🔹 arXiv (REAL direct-PDF feed)
+      - name: Fetch data from arXiv
+        run: |
+          curl -L "https://export.arxiv.org/api/query?search_query=cs.AI&start=0&max_results=20" \
+          -o data/arxiv.xml
+
+      # 🔹 DOAJ (REAL metadata)
+      - name: Fetch data from DOAJ
+        run: |
+          curl -L "https://doaj.org/api/v2/search/articles/*?page=1&pageSize=20" \
+          -H "Accept: application/json" \
+          -o data/doaj.json
+
+      # 🔹 ChinaXiv (REAL OAI-PMH feed – arXiv-style)
+      - name: Fetch data from ChinaXiv
+        run: |
+          curl -L "https://chinaxiv.org/oai?verb=ListRecords&metadataPrefix=oai_dc" \
+          -o data/chinaxiv.xml
+
+      # 🔹 COMMIT & PUSH
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add data/arxiv.xml data/doaj.json data/chinaxiv.xml
+          git commit -m "update arxiv + doaj + chinaxiv data" || echo "no changes"
+          git push
