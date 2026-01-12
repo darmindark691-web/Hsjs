@@ -2,10 +2,10 @@
 <feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
   <id>https://arxiv.org/api/w6BP7vs60TZ0HkHnY561nLODvqk</id>
   <title>arXiv Query: search_query=all:cs.AI&amp;id_list=&amp;start=0&amp;max_results=20</title>
-  <updated>2026-01-11T13:44:14Z</updated>
+  <updated>2026-01-12T04:18:12Z</updated>
   <link href="https://arxiv.org/api/query?search_query=all:cs.AI&amp;start=0&amp;max_results=20&amp;id_list=" type="application/atom+xml"/>
   <opensearch:itemsPerPage>20</opensearch:itemsPerPage>
-  <opensearch:totalResults>157393</opensearch:totalResults>
+  <opensearch:totalResults>157513</opensearch:totalResults>
   <opensearch:startIndex>0</opensearch:startIndex>
   <entry>
     <id>http://arxiv.org/abs/cs/9909009v1</id>
@@ -319,6 +319,28 @@
     </author>
   </entry>
   <entry>
+    <id>http://arxiv.org/abs/2002.07143v2</id>
+    <title>Identifying the Development and Application of Artificial Intelligence in Scientific Text</title>
+    <updated>2020-05-28T15:35:17Z</updated>
+    <link href="https://arxiv.org/abs/2002.07143v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2002.07143v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We describe a strategy for identifying the universe of research publications relevant to the application and development of artificial intelligence. The approach leverages the arXiv corpus of scientific preprints, in which authors choose subject tags for their papers from a set defined by editors. We compose a functional definition of AI relevance by learning these subjects from paper metadata, and then inferring the arXiv-subject labels of papers in larger corpora: Clarivate Web of Science, Digital Science Dimensions, and Microsoft Academic Graph. This yields predictive classification $F_1$ scores between .75 and .86 for Natural Language Processing (cs.CL), Computer Vision (cs.CV), and Robotics (cs.RO). For a single model that learns these and four other AI-relevant subjects (cs.AI, cs.LG, stat.ML, and cs.MA), we see precision of .83 and recall of .85. We evaluate the out-of-domain performance of our classifiers against other sources of topic information and predictions from alternative methods. We find that a supervised solution can generalize to identify publications that belong to the high-level fields of study represented on arXiv. This offers a method for identifying AI-relevant publications that updates at the pace of research output, without reliance on subject-matter experts for query development or labeling.</summary>
+    <category term="cs.DL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-02-17T18:58:59Z</published>
+    <arxiv:comment>This revision expands our analysis in Section 5. We predict and evaluate labels for publications in Microsoft Academic Graph and Digital Science Dimensions, in addition to Clarivate Web of Science</arxiv:comment>
+    <arxiv:primary_category term="cs.DL"/>
+    <author>
+      <name>James Dunham</name>
+    </author>
+    <author>
+      <name>Jennifer Melot</name>
+    </author>
+    <author>
+      <name>Dewey Murdick</name>
+    </author>
+  </entry>
+  <entry>
     <id>http://arxiv.org/abs/cond-mat/0408190v2</id>
     <title>From spin glasses to hard satisfiable formulas</title>
     <updated>2012-10-17T15:32:28Z</updated>
@@ -339,28 +361,6 @@
     </author>
     <author>
       <name>Bart Selman</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2002.07143v2</id>
-    <title>Identifying the Development and Application of Artificial Intelligence in Scientific Text</title>
-    <updated>2020-05-28T15:35:17Z</updated>
-    <link href="https://arxiv.org/abs/2002.07143v2" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2002.07143v2" rel="related" type="application/pdf" title="pdf"/>
-    <summary>We describe a strategy for identifying the universe of research publications relevant to the application and development of artificial intelligence. The approach leverages the arXiv corpus of scientific preprints, in which authors choose subject tags for their papers from a set defined by editors. We compose a functional definition of AI relevance by learning these subjects from paper metadata, and then inferring the arXiv-subject labels of papers in larger corpora: Clarivate Web of Science, Digital Science Dimensions, and Microsoft Academic Graph. This yields predictive classification $F_1$ scores between .75 and .86 for Natural Language Processing (cs.CL), Computer Vision (cs.CV), and Robotics (cs.RO). For a single model that learns these and four other AI-relevant subjects (cs.AI, cs.LG, stat.ML, and cs.MA), we see precision of .83 and recall of .85. We evaluate the out-of-domain performance of our classifiers against other sources of topic information and predictions from alternative methods. We find that a supervised solution can generalize to identify publications that belong to the high-level fields of study represented on arXiv. This offers a method for identifying AI-relevant publications that updates at the pace of research output, without reliance on subject-matter experts for query development or labeling.</summary>
-    <category term="cs.DL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2020-02-17T18:58:59Z</published>
-    <arxiv:comment>This revision expands our analysis in Section 5. We predict and evaluate labels for publications in Microsoft Academic Graph and Digital Science Dimensions, in addition to Clarivate Web of Science</arxiv:comment>
-    <arxiv:primary_category term="cs.DL"/>
-    <author>
-      <name>James Dunham</name>
-    </author>
-    <author>
-      <name>Jennifer Melot</name>
-    </author>
-    <author>
-      <name>Dewey Murdick</name>
     </author>
   </entry>
   <entry>
@@ -405,12 +405,12 @@
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2511.16035v1</id>
+    <id>http://arxiv.org/abs/2511.16035v2</id>
     <title>Liars' Bench: Evaluating Lie Detectors for Language Models</title>
-    <updated>2025-11-20T04:29:33Z</updated>
-    <link href="https://arxiv.org/abs/2511.16035v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2511.16035v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Prior work has introduced techniques for detecting when large language models (LLMs) lie, that is, generating statements they believe are false. However, these techniques are typically validated in narrow settings that do not capture the diverse lies LLMs can generate. We introduce LIARS' BENCH, a testbed consisting of 72,863 examples of lies and honest responses generated by four open-weight models across seven datasets. Our settings capture qualitatively different types of lies and vary along two dimensions: the model's reason for lying and the object of belief targeted by the lie. Evaluating three black- and white-box lie detection techniques on LIARS' BENCH, we find that existing techniques systematically fail to identify certain types of lies, especially in settings where it's not possible to determine whether the model lied from the transcript alone. Overall, LIARS' BENCH reveals limitations in prior techniques and provides a practical testbed for guiding progress in lie detection.</summary>
+    <updated>2026-01-08T21:10:47Z</updated>
+    <link href="https://arxiv.org/abs/2511.16035v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2511.16035v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Prior work has introduced techniques for detecting when large language models (LLMs) lie, that is, generate statements they believe are false. However, these techniques are typically validated in narrow settings that do not capture the diverse lies LLMs can generate. We introduce LIARS' BENCH, a testbed consisting of 72,863 examples of lies and honest responses generated by four open-weight models across seven datasets. Our settings capture qualitatively different types of lies and vary along two dimensions: the model's reason for lying and the object of belief targeted by the lie. Evaluating three black- and white-box lie detection techniques on LIARS' BENCH, we find that existing techniques systematically fail to identify certain types of lies, especially in settings where it's not possible to determine whether the model lied from the transcript alone. Overall, LIARS' BENCH reveals limitations in prior techniques and provides a practical testbed for guiding progress in lie detection.</summary>
     <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
     <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
     <published>2025-11-20T04:29:33Z</published>
@@ -418,21 +418,15 @@
     <arxiv:primary_category term="cs.CL"/>
     <author>
       <name>Kieron Kretschmar</name>
-      <arxiv:affiliation>Cadenza Labs</arxiv:affiliation>
     </author>
     <author>
       <name>Walter Laurito</name>
-      <arxiv:affiliation>Cadenza Labs</arxiv:affiliation>
-      <arxiv:affiliation>FZI</arxiv:affiliation>
     </author>
     <author>
       <name>Sharan Maiya</name>
-      <arxiv:affiliation>Cadenza Labs</arxiv:affiliation>
-      <arxiv:affiliation>University of Cambridge</arxiv:affiliation>
     </author>
     <author>
       <name>Samuel Marks</name>
-      <arxiv:affiliation>Anthropic</arxiv:affiliation>
     </author>
   </entry>
 </feed>
