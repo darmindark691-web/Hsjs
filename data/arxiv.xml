@@ -2,10 +2,10 @@
 <feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
   <id>https://arxiv.org/api/w6BP7vs60TZ0HkHnY561nLODvqk</id>
   <title>arXiv Query: search_query=all:cs.AI&amp;id_list=&amp;start=0&amp;max_results=20</title>
-  <updated>2026-01-26T01:50:27Z</updated>
+  <updated>2026-01-26T12:46:10Z</updated>
   <link href="https://arxiv.org/api/query?search_query=all:cs.AI&amp;start=0&amp;max_results=20&amp;id_list=" type="application/atom+xml"/>
   <opensearch:itemsPerPage>20</opensearch:itemsPerPage>
-  <opensearch:totalResults>159203</opensearch:totalResults>
+  <opensearch:totalResults>159309</opensearch:totalResults>
   <opensearch:startIndex>0</opensearch:startIndex>
   <entry>
     <id>http://arxiv.org/abs/cs/9909009v1</id>
@@ -262,23 +262,6 @@
     </author>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2509.12229v1</id>
-    <title>Profiling LoRA/QLoRA Fine-Tuning Efficiency on Consumer GPUs: An RTX 4060 Case Study</title>
-    <updated>2025-09-07T21:41:14Z</updated>
-    <link href="https://arxiv.org/abs/2509.12229v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2509.12229v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Fine-tuning large language models (LLMs) with parameter-efficient techniques such as LoRA and QLoRA has enabled adaptation of foundation models on modest hardware. Yet the efficiency of such training on consumer-grade GPUs, especially under strict 8 GB VRAM limits, remains underexplored. We present a controlled profiling study of LoRA/QLoRA fine-tuning using the Qwen2.5-1.5B-Instruct model on a single NVIDIA RTX 4060. Across three representative configurations, we systematically vary batch size, sequence length, optimizer choice (AdamW vs. PagedAdamW), and precision (fp16 vs. bf16). We report throughput (tokens/s), time per 10k tokens, and VRAM footprint, alongside energy estimates derived from GPU board power limits. Our results show that paged optimizers improve throughput by up to 25% (628 tok/s vs. 500 tok/s baseline), while bf16 degrades efficiency relative to fp16. Despite 8 GB constraints, sequence lengths up to 2048 tokens were feasible using parameter-efficient strategies. To our knowledge, this is the first systematic case study of LLM fine- tuning efficiency on consumer GPUs, providing reproducible benchmarks and practical guidelines for resource-constrained researchers and practitioners.</summary>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.PF" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-09-07T21:41:14Z</published>
-    <arxiv:comment>8 pages, 3 figures, 2 tables. Primary category: cs.LG (Machine Learning); secondary: cs.AI (Artificial Intelligence). LaTeX source with figures included</arxiv:comment>
-    <arxiv:primary_category term="cs.LG"/>
-    <author>
-      <name>MSR Avinash</name>
-    </author>
-  </entry>
-  <entry>
     <id>http://arxiv.org/abs/2011.02565v1</id>
     <title>Diversity-Enriched Option-Critic</title>
     <updated>2020-11-04T22:12:54Z</updated>
@@ -298,6 +281,23 @@
     </author>
     <arxiv:doi>10.48550/arXiv.2011.02565</arxiv:doi>
     <link rel="related" href="https://doi.org/10.48550/arXiv.2011.02565" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.12229v1</id>
+    <title>Profiling LoRA/QLoRA Fine-Tuning Efficiency on Consumer GPUs: An RTX 4060 Case Study</title>
+    <updated>2025-09-07T21:41:14Z</updated>
+    <link href="https://arxiv.org/abs/2509.12229v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2509.12229v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Fine-tuning large language models (LLMs) with parameter-efficient techniques such as LoRA and QLoRA has enabled adaptation of foundation models on modest hardware. Yet the efficiency of such training on consumer-grade GPUs, especially under strict 8 GB VRAM limits, remains underexplored. We present a controlled profiling study of LoRA/QLoRA fine-tuning using the Qwen2.5-1.5B-Instruct model on a single NVIDIA RTX 4060. Across three representative configurations, we systematically vary batch size, sequence length, optimizer choice (AdamW vs. PagedAdamW), and precision (fp16 vs. bf16). We report throughput (tokens/s), time per 10k tokens, and VRAM footprint, alongside energy estimates derived from GPU board power limits. Our results show that paged optimizers improve throughput by up to 25% (628 tok/s vs. 500 tok/s baseline), while bf16 degrades efficiency relative to fp16. Despite 8 GB constraints, sequence lengths up to 2048 tokens were feasible using parameter-efficient strategies. To our knowledge, this is the first systematic case study of LLM fine- tuning efficiency on consumer GPUs, providing reproducible benchmarks and practical guidelines for resource-constrained researchers and practitioners.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.PF" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-09-07T21:41:14Z</published>
+    <arxiv:comment>8 pages, 3 figures, 2 tables. Primary category: cs.LG (Machine Learning); secondary: cs.AI (Artificial Intelligence). LaTeX source with figures included</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>MSR Avinash</name>
+    </author>
   </entry>
   <entry>
     <id>http://arxiv.org/abs/2507.10475v1</id>
