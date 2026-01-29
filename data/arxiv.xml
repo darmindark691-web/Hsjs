@@ -2,7 +2,7 @@
 <feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
   <id>https://arxiv.org/api/w6BP7vs60TZ0HkHnY561nLODvqk</id>
   <title>arXiv Query: search_query=all:cs.AI&amp;id_list=&amp;start=0&amp;max_results=20</title>
-  <updated>2026-01-28T12:48:36Z</updated>
+  <updated>2026-01-29T01:56:31Z</updated>
   <link href="https://arxiv.org/api/query?search_query=all:cs.AI&amp;start=0&amp;max_results=20&amp;id_list=" type="application/atom+xml"/>
   <opensearch:itemsPerPage>20</opensearch:itemsPerPage>
   <opensearch:totalResults>159766</opensearch:totalResults>
@@ -262,6 +262,23 @@
     </author>
   </entry>
   <entry>
+    <id>http://arxiv.org/abs/2509.12229v1</id>
+    <title>Profiling LoRA/QLoRA Fine-Tuning Efficiency on Consumer GPUs: An RTX 4060 Case Study</title>
+    <updated>2025-09-07T21:41:14Z</updated>
+    <link href="https://arxiv.org/abs/2509.12229v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2509.12229v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Fine-tuning large language models (LLMs) with parameter-efficient techniques such as LoRA and QLoRA has enabled adaptation of foundation models on modest hardware. Yet the efficiency of such training on consumer-grade GPUs, especially under strict 8 GB VRAM limits, remains underexplored. We present a controlled profiling study of LoRA/QLoRA fine-tuning using the Qwen2.5-1.5B-Instruct model on a single NVIDIA RTX 4060. Across three representative configurations, we systematically vary batch size, sequence length, optimizer choice (AdamW vs. PagedAdamW), and precision (fp16 vs. bf16). We report throughput (tokens/s), time per 10k tokens, and VRAM footprint, alongside energy estimates derived from GPU board power limits. Our results show that paged optimizers improve throughput by up to 25% (628 tok/s vs. 500 tok/s baseline), while bf16 degrades efficiency relative to fp16. Despite 8 GB constraints, sequence lengths up to 2048 tokens were feasible using parameter-efficient strategies. To our knowledge, this is the first systematic case study of LLM fine- tuning efficiency on consumer GPUs, providing reproducible benchmarks and practical guidelines for resource-constrained researchers and practitioners.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.PF" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-09-07T21:41:14Z</published>
+    <arxiv:comment>8 pages, 3 figures, 2 tables. Primary category: cs.LG (Machine Learning); secondary: cs.AI (Artificial Intelligence). LaTeX source with figures included</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>MSR Avinash</name>
+    </author>
+  </entry>
+  <entry>
     <id>http://arxiv.org/abs/2011.02565v1</id>
     <title>Diversity-Enriched Option-Critic</title>
     <updated>2020-11-04T22:12:54Z</updated>
@@ -283,23 +300,6 @@
     <link rel="related" href="https://doi.org/10.48550/arXiv.2011.02565" title="doi"/>
   </entry>
   <entry>
-    <id>http://arxiv.org/abs/2509.12229v1</id>
-    <title>Profiling LoRA/QLoRA Fine-Tuning Efficiency on Consumer GPUs: An RTX 4060 Case Study</title>
-    <updated>2025-09-07T21:41:14Z</updated>
-    <link href="https://arxiv.org/abs/2509.12229v1" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2509.12229v1" rel="related" type="application/pdf" title="pdf"/>
-    <summary>Fine-tuning large language models (LLMs) with parameter-efficient techniques such as LoRA and QLoRA has enabled adaptation of foundation models on modest hardware. Yet the efficiency of such training on consumer-grade GPUs, especially under strict 8 GB VRAM limits, remains underexplored. We present a controlled profiling study of LoRA/QLoRA fine-tuning using the Qwen2.5-1.5B-Instruct model on a single NVIDIA RTX 4060. Across three representative configurations, we systematically vary batch size, sequence length, optimizer choice (AdamW vs. PagedAdamW), and precision (fp16 vs. bf16). We report throughput (tokens/s), time per 10k tokens, and VRAM footprint, alongside energy estimates derived from GPU board power limits. Our results show that paged optimizers improve throughput by up to 25% (628 tok/s vs. 500 tok/s baseline), while bf16 degrades efficiency relative to fp16. Despite 8 GB constraints, sequence lengths up to 2048 tokens were feasible using parameter-efficient strategies. To our knowledge, this is the first systematic case study of LLM fine- tuning efficiency on consumer GPUs, providing reproducible benchmarks and practical guidelines for resource-constrained researchers and practitioners.</summary>
-    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.PF" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2025-09-07T21:41:14Z</published>
-    <arxiv:comment>8 pages, 3 figures, 2 tables. Primary category: cs.LG (Machine Learning); secondary: cs.AI (Artificial Intelligence). LaTeX source with figures included</arxiv:comment>
-    <arxiv:primary_category term="cs.LG"/>
-    <author>
-      <name>MSR Avinash</name>
-    </author>
-  </entry>
-  <entry>
     <id>http://arxiv.org/abs/2507.10475v1</id>
     <title>Can You Detect the Difference?</title>
     <updated>2025-07-14T16:55:57Z</updated>
@@ -316,28 +316,6 @@
     </author>
     <author>
       <name>Aytuğ Onan</name>
-    </author>
-  </entry>
-  <entry>
-    <id>http://arxiv.org/abs/2002.07143v2</id>
-    <title>Identifying the Development and Application of Artificial Intelligence in Scientific Text</title>
-    <updated>2020-05-28T15:35:17Z</updated>
-    <link href="https://arxiv.org/abs/2002.07143v2" rel="alternate" type="text/html"/>
-    <link href="https://arxiv.org/pdf/2002.07143v2" rel="related" type="application/pdf" title="pdf"/>
-    <summary>We describe a strategy for identifying the universe of research publications relevant to the application and development of artificial intelligence. The approach leverages the arXiv corpus of scientific preprints, in which authors choose subject tags for their papers from a set defined by editors. We compose a functional definition of AI relevance by learning these subjects from paper metadata, and then inferring the arXiv-subject labels of papers in larger corpora: Clarivate Web of Science, Digital Science Dimensions, and Microsoft Academic Graph. This yields predictive classification $F_1$ scores between .75 and .86 for Natural Language Processing (cs.CL), Computer Vision (cs.CV), and Robotics (cs.RO). For a single model that learns these and four other AI-relevant subjects (cs.AI, cs.LG, stat.ML, and cs.MA), we see precision of .83 and recall of .85. We evaluate the out-of-domain performance of our classifiers against other sources of topic information and predictions from alternative methods. We find that a supervised solution can generalize to identify publications that belong to the high-level fields of study represented on arXiv. This offers a method for identifying AI-relevant publications that updates at the pace of research output, without reliance on subject-matter experts for query development or labeling.</summary>
-    <category term="cs.DL" scheme="http://arxiv.org/schemas/atom"/>
-    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
-    <published>2020-02-17T18:58:59Z</published>
-    <arxiv:comment>This revision expands our analysis in Section 5. We predict and evaluate labels for publications in Microsoft Academic Graph and Digital Science Dimensions, in addition to Clarivate Web of Science</arxiv:comment>
-    <arxiv:primary_category term="cs.DL"/>
-    <author>
-      <name>James Dunham</name>
-    </author>
-    <author>
-      <name>Jennifer Melot</name>
-    </author>
-    <author>
-      <name>Dewey Murdick</name>
     </author>
   </entry>
   <entry>
@@ -361,6 +339,28 @@
     </author>
     <author>
       <name>Bart Selman</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2002.07143v2</id>
+    <title>Identifying the Development and Application of Artificial Intelligence in Scientific Text</title>
+    <updated>2020-05-28T15:35:17Z</updated>
+    <link href="https://arxiv.org/abs/2002.07143v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2002.07143v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We describe a strategy for identifying the universe of research publications relevant to the application and development of artificial intelligence. The approach leverages the arXiv corpus of scientific preprints, in which authors choose subject tags for their papers from a set defined by editors. We compose a functional definition of AI relevance by learning these subjects from paper metadata, and then inferring the arXiv-subject labels of papers in larger corpora: Clarivate Web of Science, Digital Science Dimensions, and Microsoft Academic Graph. This yields predictive classification $F_1$ scores between .75 and .86 for Natural Language Processing (cs.CL), Computer Vision (cs.CV), and Robotics (cs.RO). For a single model that learns these and four other AI-relevant subjects (cs.AI, cs.LG, stat.ML, and cs.MA), we see precision of .83 and recall of .85. We evaluate the out-of-domain performance of our classifiers against other sources of topic information and predictions from alternative methods. We find that a supervised solution can generalize to identify publications that belong to the high-level fields of study represented on arXiv. This offers a method for identifying AI-relevant publications that updates at the pace of research output, without reliance on subject-matter experts for query development or labeling.</summary>
+    <category term="cs.DL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-02-17T18:58:59Z</published>
+    <arxiv:comment>This revision expands our analysis in Section 5. We predict and evaluate labels for publications in Microsoft Academic Graph and Digital Science Dimensions, in addition to Clarivate Web of Science</arxiv:comment>
+    <arxiv:primary_category term="cs.DL"/>
+    <author>
+      <name>James Dunham</name>
+    </author>
+    <author>
+      <name>Jennifer Melot</name>
+    </author>
+    <author>
+      <name>Dewey Murdick</name>
     </author>
   </entry>
   <entry>
