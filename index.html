@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Submit Your Startup – BharatVerse</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+  font-family:system-ui;
+  background:#f5f7fb;
+  padding:20px;
+}
+form{
+  max-width:720px;
+  margin:auto;
+  background:#fff;
+  padding:25px;
+  border-radius:14px;
+  box-shadow:0 10px 40px rgba(0,0,0,.08);
+}
+h2{text-align:center;margin-bottom:20px}
+label{font-weight:600;margin-top:14px;display:block}
+input,select,textarea{
+  width:100%;
+  padding:10px;
+  margin-top:6px;
+  border-radius:8px;
+  border:1px solid #ccc;
+}
+textarea{min-height:90px}
+button{
+  margin-top:20px;
+  width:100%;
+  padding:14px;
+  border:none;
+  background:#000;
+  color:#fff;
+  font-size:16px;
+  border-radius:10px;
+  cursor:pointer;
+}
+small{color:#666}
+</style>
+</head>
+
+<body>
+
+<form id="startupForm">
+<h2>🚀 Submit Your Startup</h2>
+
+<label>Startup / Company Name *</label>
+<input id="startup_name" required>
+
+<label>Founder Name *</label>
+<input id="founder_name" required>
+
+<label>Category *</label>
+<select id="category" required>
+<option value="">Select one</option>
+<option>AI Agent</option>
+<option>Generative AI</option>
+<option>LLM Platform</option>
+<option>AI Tools</option>
+<option>Automation</option>
+<option>Developer Tools</option>
+<option>No-Code / Low-Code</option>
+<option>SaaS</option>
+<option>FinTech</option>
+<option>HealthTech</option>
+<option>EdTech</option>
+<option>AgriTech</option>
+<option>ClimateTech</option>
+<option>Web3 / Blockchain</option>
+<option>Cybersecurity</option>
+<option>Data Analytics</option>
+<option>Robotics</option>
+<option>Computer Vision</option>
+<option>NLP</option>
+<option>Voice AI</option>
+<option>AI Search</option>
+<option>Productivity</option>
+<option>Marketing Tech</option>
+<option>Sales Tech</option>
+<option>HR Tech</option>
+<option>Customer Support AI</option>
+<option>E-commerce</option>
+<option>Creator Tools</option>
+<option>Gaming</option>
+<option>AR / VR</option>
+<option>IoT</option>
+<option>Open Source</option>
+<option>Research</option>
+<option>AI Infrastructure</option>
+<option>Cloud Platforms</option>
+<option>DevOps</option>
+<option>AI Hardware</option>
+<option>Other</option>
+</select>
+
+<label>Problem Statement (max 100 words) *</label>
+<textarea id="problem" required></textarea>
+
+<label>Website *</label>
+<input id="website" placeholder="https://">
+
+<label>Country *</label>
+<input id="country">
+
+<label>Email *</label>
+<input id="email" type="email">
+
+<label>Phone *</label>
+<input id="phone">
+
+<label>Instagram (optional)</label>
+<input id="instagram">
+
+<label>YouTube (optional)</label>
+<input id="youtube">
+
+<label>Twitter (optional)</label>
+<input id="twitter">
+
+<label>LinkedIn (optional)</label>
+<input id="linkedin">
+
+<button type="submit">Submit Startup</button>
+<small>Submission will be published publicly</small>
+</form>
+
+<script>
+document.getElementById("startupForm").onsubmit = function(e){
+e.preventDefault();
+
+const yml = `
+startup:
+  startup_name: "${startup_name.value}"
+  founder_name: "${founder_name.value}"
+  category: "${category.value}"
+
+  problem_statement: |
+    ${problem.value}
+
+  website: "${website.value}"
+  country: "${country.value}"
+
+  contact:
+    email: "${email.value}"
+    phone: "${phone.value}"
+
+  optional_links:
+    instagram: "${instagram.value}"
+    youtube: "${youtube.value}"
+    twitter: "${twitter.value}"
+    linkedin: "${linkedin.value}"
+
+  declaration:
+    original_submission: true
+    public_content: true
+`;
+
+const issueURL =
+`https://github.com/darmindark691-web/Bharatverse_Startups/issues/new?title=${encodeURIComponent("[Startup] " + startup_name.value)}&body=${encodeURIComponent(yml)}`;
+
+window.open(issueURL,"_blank");
+};
+</script>
+
+</body>
+</html>
