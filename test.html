@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Supabase API Test</h2>
+<button onclick="check()">Check API</button>
+
+<script>
+async function check() {
+  try {
+    const res = await fetch("https://upsabnc.functions.supabase.co/security", {
+      method: "GET",
+      headers: {
+        "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+      }
+    });
+
+    const data = await res.json();
+    alert(JSON.stringify(data));
+    console.log(data);
+
+  } catch (err) {
+    alert("Error: " + err);
+  }
+}
+</script>
+
+</body>
+</html>
